@@ -1,0 +1,14 @@
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(145deg, #333, #222);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    z-index: 25;
+}

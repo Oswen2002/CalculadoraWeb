@@ -1,0 +1,69 @@
+/* Menú lateral */
+#menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+#menu-icon:hover {
+    transform: scale(1.2);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #333, #222);
+    padding-top: 60px;
+    transition: left 0.3s ease, box-shadow 0.3s ease;
+    z-index: 30;
+    overflow-y: auto;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.side-menu ul li{
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Elimina la subrayado */
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.side-menu ul li:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}

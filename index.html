@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="./src/css/calculadoraBasica.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/general.css">
+    <link rel="stylesheet" href="./src/css/menu.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Icono del menu -->
+    <div id="menu-icon" class="menu-icon">&#9776;</div>
+
+    <!-- Menú lateral -->
+    <div id="side-menu" class="side-menu">
+        <div class="close-btn" id="close-btn">&times;</div>
+        <ul>
+            <li><a href="index.html">Calculadora Básica</a></li>
+            <li><a href="#">Calculadora Científica</a></li>
+            <li><a href="#">Calculadora de Volumen</a></li>
+            <li><a href="#">Calculadora de Áreas</a></li>
+            <li><a href="#">Conversor de Divisas</a></li>
+            <li><a href="#">Conversor de Unidades</a></li>
+            <li><a href="#">Acerca de</a> <i class="fas fa-info-circle"></i></li>
+        </ul>
+    </div>
+
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="display" readonly>
+        </div>
+        <div class="buttons">
+            <button class="Op" onclick="clearDisplay()">C</button>
+            <button class="Op" onclick="appendValue('(')">(</button>
+            <button class="Op" onclick="appendValue(')')">)</button>
+            <button class="Op" onclick="deleteLast()"><i class="fas fa-backspace"></i></button>
+
+            <button class="btn" onclick="appendValue(7)">7</button>
+            <button class="btn" onclick="appendValue(8)">8</button>
+            <button class="btn" onclick="appendValue(9)">9</button>
+            <button class="Op" onclick="appendValue('/')"><i class="fas fa-divide"></i></button>
+
+            <button class="btn" onclick="appendValue(4)">4</button>
+            <button class="btn" onclick="appendValue(5)">5</button>
+            <button class="btn" onclick="appendValue(6)">6</button>
+            <button class="Op" onclick="appendValue('*')"><i class="fas fa-times"></i></button>
+
+            <button class="btn" onclick="appendValue(1)">1</button>
+            <button class="btn" onclick="appendValue(2)">2</button>
+            <button class="btn" onclick="appendValue(3)">3</button>
+            <button class="Op" onclick="appendValue('-')"><i class="fas fa-minus"></i></button>
+
+            <button class="btn" onclick="appendValue(0)">0</button>
+            <button class="btn" onclick="appendValue('.')">.</button>
+            <button class="btn" onclick="calculate()"><i class="fas fa-equals"></i></button>
+            <button class="Op" onclick="appendValue('+')"><i class="fas fa-plus"></i></button>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2024 Oswen Solis. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./src/js/calculadoraBasica.js"></script>
+    <script src="./src/js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+</body>
+</html>
